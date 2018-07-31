@@ -44,20 +44,26 @@
                 <br>
 
                 <!-- CREATE RADIO BUTTONS FOR 1 ANSWER OF MANY OPTIONS <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor">Indoor</label>-->
-
-                <p>Choose ONE topic to work on during your lesson.</p>
-                <label for="full-swing">
-                    <input type="radio" name="lesson-topic" required>Full Swing</label>
-                <label for="putting">
-                    <input type="radio" name="lesson-topic">Putting</label>
-                <label for="Chipping">
-                    <input type="radio" name="lesson-topic">Chipping</label>
-                <label for="Playing">
-                    <input type="radio" name="lesson-topic">Playing Lesson</label>
-                <label for="other">
-                    <input type="radio" name="lesson-topic">Other. Please add comments below.</label>
-                <textarea name="topic-comments" id="comments" cols="30" rows="10"></textarea>
-
+                <fieldset>
+                    <legend>Choose ONE topic to work on during your lesson.</legend>
+                    <div>
+                        <label for="full-swing">
+                            <input type="radio" name="lesson-topic" required>Full Swing
+                        </label>
+                        <label for="putting">
+                            <input type="radio" name="lesson-topic">Putting</label>
+                        <label for="Chipping">
+                            <input type="radio" name="lesson-topic">Chipping</label>
+                        <label for="Playing">
+                            <input type="radio" name="lesson-topic">Playing Lesson</label>
+                        <label for="other">
+                            <input type="radio" name="lesson-topic">Other.
+                            <br>Please add comments here. </label>
+                    </div>
+                    <div>
+                        <textarea name="topic-comments" id="comments" cols="30" rows="10"></textarea>
+                    </div>
+                </fieldset>
 
                 <p>
                     <label for="lesson-length">How long of a lesson would you like?
