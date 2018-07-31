@@ -8,13 +8,42 @@ body {
 	font-family: arial;
     font-size: 16px;
     color:black;
+    padding: 20px;
 }
-
 
 #title  {
     font-family: arial;
     font-size: 30px;
-    color: green
+    color: green;
+    text-align: center;
+}
+
+p {
+  text-align: center;
+}
+
+div {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+fieldset {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+fieldset #topic {
+    text-align: center;
+}
+
+fieldset #time {
+  text-align: justify;
+}
+
+legend {
+  text-align: left;
+}
+
+label {
+    margin: .4rem;
 }
 
 input:invalid {
@@ -24,13 +53,17 @@ input:invalid {
 input:valid {
   border: 2px solid black;
 }
-	
-/*----------------------------------------------------------------------------------------------------------------------Header and Footer styles------------------------------------
-----------------------------------------------------------------------------------------*/
+  
+abbr {
+  color: red;
+}
 
-/* ----------------------Header------------------------------------------------ */
-/* ----------------------FOOTER------------------------------------------------ */
-/* ----------------------Navigation------------------------------------------------ */
+button {
+  background-color: green;
+  color: white;
+  padding: 10px;
+
+}
 
 
 /*---------------------------------------------------------------------------------------- ---------------------------------------Media Queries-------------------------------------

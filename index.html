@@ -14,38 +14,70 @@
                 <h1>Golf Lesson Contact Form</h1>
             </header>
 
-            <p id="description">Please complete the form to request a lesson.</p>
+            <p id="description">
+                <h2>Please complete the form to request a lesson.</h2>
+            </p>
 
             <!--CREATE A FORM ELEMENT <form action="/url-where-you-want-to-submit-form-data"></form>  -->
             <form id="survey-form" action="">
 
 
                 <!-- CREATE A TEXT FIELD with placeholder text and REQUIRE it: <input type="text" required placeholder="this is placeholder text"> -->
-                <label for="name" id="name-label">First and Last Name</label>
-                <input type="text" required name="First Last" id="name" placeholder="First and Last Name">
-                <br>
+                <div>
+                    <label for="name" id="name-label">First and Last Name</label>
+                    <input type="text" required name="First Last" id="name" placeholder="First and Last Name">
+                    <abbr title="This is a required element.">*</abbr>
+                    <br>
+                </div>
+
 
                 <!--Important: HTML form validation is not a substitute for scripts that ensure that the entered data is in the proper format. -->
 
-                <label for="email" id="email-label">Email Address</label>
-                <input type="email" name="email" id="email" placeholder="bsmith@gmail.com" size="32" minlength="8">
-                <br>
+                <div>
+                    <label for="email" id="email-label">Email Address</label>
+                    <input type="email" name="email" id="email" placeholder="bsmith@gmail.com" size="32" minlength="8">
+                    <br>
+                </div>
 
-                <label for="phone" id="phone-label">Local Phone Number (XXX XXX XXXX)</label>
-                <input type="tel" required name="phone" id="phone" placeholder="(123) 456 - 7890" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}">
-                <br>
+                <div>
+                    <label for="phone" id="phone-label">Local Phone Number (XXX XXX XXXX)</label>
+                    <input type="tel" required name="phone" id="phone" placeholder="(123) 456 - 7890" pattern="[0-9]{3}[ -][0-9]{3}[ -][0-9]{4}">
+                    <abbr title="This is a required element.">*</abbr>
+                    <br>
+                </div>
 
-                <label for="month">What date would you like your lesson?</label>
-                <input type="date" id="dropdown" required>
-                <br>
+                <div>
+                    <label for="month">What date would you like your lesson?</label>
+                    <input type="date" id="dropdown" required>
+                    <abbr title="This is a required element.">*</abbr>
+                    <br>
+                </div>
 
-                <label for="number" id="number-label">How many people will be in the lesson? (up to 6)</label>
-                <input type="number" id="number" placeholder="total number" required min="1" max="6">
-                <br>
+                <div>
+                    <label for="number" id="number-label">How many people will be in the lesson? (up to 6)</label>
+                    <input type="number" id="number" placeholder="total #" required min="1" max="6">
+                    <abbr title="This is a required element.">*</abbr>
+                    <br>
+                </div>
+
+                <div>
+                    <label for="lesson-length">How long of a lesson would you like?
+                        <input list="length" name="lesson-length" required>
+                        <datalist id="length">
+                            <option value="30 minutes"></option>
+                            <option value="1 hour"></option>
+                            <option value="2 hours"></option>
+                            <option value="playing lesson"></option>
+                        </datalist>
+                    </label>
+                    <abbr title="This is a required element.">*</abbr>
+                </div>
 
                 <!-- CREATE RADIO BUTTONS FOR 1 ANSWER OF MANY OPTIONS <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor">Indoor</label>-->
-                <fieldset>
-                    <legend>Choose ONE topic to work on during your lesson.</legend>
+                <fieldset id="topic">
+                    <legend>
+                        <b>Choose ONE topic to work on during your lesson.</b>
+                    </legend>
                     <div>
                         <label for="full-swing">
                             <input type="radio" name="lesson-topic" required>Full Swing
@@ -57,26 +89,27 @@
                         <label for="Playing">
                             <input type="radio" name="lesson-topic">Playing Lesson</label>
                         <label for="other">
-                            <input type="radio" name="lesson-topic">Other.
-                            <br>Please add comments here. </label>
+                            <input type="radio" name="lesson-topic">Other
+                        </label>
                     </div>
                     <div>
+                        <p>
+                            <h5>Please add comments here.</h5>
+                        </p>
                         <textarea name="topic-comments" id="comments" cols="30" rows="10"></textarea>
                     </div>
                 </fieldset>
 
-                <p>
-                    <label for="lesson-length">How long of a lesson would you like?
-                        <input list="length" name="lesson-length" required>
-                        <datalist id="length">
-                            <option value="30 minutes"></option>
-                            <option value="1 hour"></option>
-                            <option value="2 hours"></option>
-                            <option value="playing lesson"></option>
-                        </datalist>
-                    </label>
-                    <p>What time works best for you? (Note: Mike will contact you to set a specific time.(Choose as many times
-                        as you are available. Remember that times are for the Eastern time zone.)</p>
+
+
+                <!-- CREATE CHECKBOXES FOR MORE THAN 1 ANSWER <label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>-->
+                <fieldset id="time">
+                    <legend>
+                        <b>What time works best for you? Choose as many times as you are available.</b>
+                        <em>(Note: Mike will contact you to set a specific time. Remember that times are for the Eastern time
+                            zone.)
+                        </em>
+                    </legend>
                     <label for="1">
                         <input type="checkbox" name="Time" value="7 am hour">7:00am hour
                     </label>
@@ -110,13 +143,13 @@
                     <label for="11">
                         <input type="checkbox" name="Time" value="5 pm hour">5:00pm hour
                     </label>
-                    <!-- CREATE CHECKBOXES FOR MORE THAN 1 ANSWER
-<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>-->
+                </fieldset>
 
-                    <button type="submit"> Click to submit this request.</button>
+                <!--  ADD A SUBMIT BUTTON TO A FIELD <button type="submit">this button submits the form</button>-->
 
-                    <!--  
- ADD A SUBMIT BUTTON TO A FIELD <button type="submit">this button submits the form</button>-->
+                <button type="submit"> Click to submit this request.</button>
+
+
 
             </form>
 
