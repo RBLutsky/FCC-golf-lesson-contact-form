@@ -34,41 +34,82 @@
 
                 <p>What date would you like your lesson?</p>
                 <label for="month">
-                    <input type="date" id="dropdown">Day
+                    <input type="date" id="dropdown" required>Day
                 </label>
 
                 <p>How many people will be in the lesson? (up to 6)</p>
                 <label for="number" id="number-label">
-                    <input type="number" id="number" placeholder="total number">Total People
+                    <input type="number" id="number" placeholder="total number" required>Total People
                 </label>
 
                 <p>We would like to work on the following topics. (Choose one)</p>
                 <label for="full-swing">
-                    <input type="radio" name="lesson-topic">Full Swing</label>
+                    <input type="radio" name="lesson-topic" checked>Full Swing</label>
                 <label for="putting">
                     <input type="radio" name="lesson-topic">Putting</label>
                 <label for="Chipping">
                     <input type="radio" name="lesson-topic">Chipping</label>
+                <label for="Playing">
+                    <input type="radio" name="lesson-topic">Playing Lesson</label>
                 <label for="other">
                     <input type="radio" name="lesson-topic">Other. Please add comments below.</label>
+                <textarea name="topic-comments" id="comments" cols="30" rows="10"></textarea>
                 <!-- CREATE RADIO BUTTONS FOR 1 ANSWER OF MANY OPTIONS 
 <label for="indoor">
     <input id="indoor" type="radio" name="indoor-outdoor">Indoor
 </label>-->
 
+                <p>How long of a lesson would you like?
+                    <label for="half">
+                        <input type="radio" name="lesson-length" checked>30 minutes</label>
+                    <label for="1">
+                        <input type="radio" name="lesson-length">1 hour</label>
+                    <label for="2">
+                        <input type="radio" name="lesson-length">2 hours</label>
+                    <label for="4">
+                        <input type="radio" name="lesson-length">4 hour playing lesson</label>
 
+                    <p>What time works best for you? (Note: Mike will contact you to set a specific time.(Choose as many times
+                        as you are available. Remember that times are for the Eastern time zone.)</p>
+                    <label for="1">
+                        <input type="checkbox" name="7:00" value="am hour" checked>7:00am hour
+                    </label>
+                    <label for="2">
+                        <input type="checkbox" name="8:00" value="am hour">8:00am hour
+                    </label>
+                    <label for="3">
+                        <input type="checkbox" name="9:00" value="am hour">9:00am hour
+                    </label>
+                    <label for="4">
+                        <input type="checkbox" name="10:00" value="am hour">10:00am hour
+                    </label>
+                    <label for="5">
+                        <input type="checkbox" name="11:00" value="am hour">11:00am hour
+                    </label>
+                    <label for="6">
+                        <input type="checkbox" name="12:00" value="pm hour">12:00pm hour
+                    </label>
+                    <label for="7">
+                        <input type="checkbox" name="1:00" value="pm hour">1:00pm hour
+                    </label>
+                    <label for="8">
+                        <input type="checkbox" name="2:00" value="pm hour">2:00pm hour
+                    </label>
+                    <label for="9">
+                        <input type="checkbox" name="3:00" value="pm hour">3:00pm hour
+                    </label>
+                    <label for="10">
+                        <input type="checkbox" name="4:00" value="pm hour">4:00pm hour
+                    </label>
+                    <label for="11">
+                        <input type="checkbox" name="5:00" value="pm hour">5:00pm hour
+                    </label>
+                    <!-- CREATE CHECKBOXES FOR MORE THAN 1 ANSWER
+<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>-->
 
-                <!-- CREATE CHECKBOXES FOR MORE THAN 1 ANSWER
-<label for="loving"><input id="loving" type="checkbox" name="personality"> Loving</label>-->-->
+                    <button type="submit> Click to submit this request."></button>
 
-
-
-
-
-
-
-
-                <!--  
+                    <!--  
  ADD A SUBMIT BUTTON TO A FIELD <button type="submit">this button submits the form</button>-->
 
             </form>
