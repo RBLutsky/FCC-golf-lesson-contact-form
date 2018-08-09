@@ -10,8 +10,8 @@
     <body>
         <main id="main" role="main">
 
-            <header id="title">
-                <h1>Golf Lesson Contact Form</h1>
+            <header>
+                <h1 id="title">Golf Lesson Contact Form</h1>
             </header>
 
             <p id="description">
@@ -63,7 +63,7 @@
                 <div>
                     <label for="lesson-length">How long of a lesson would you like?
                         <input list="length" name="lesson-length" required>
-                        <datalist id="length">
+                        <datalist id="dropdown">
                             <option value="30 minutes"></option>
                             <option value="1 hour"></option>
                             <option value="2 hours"></option>
@@ -73,23 +73,23 @@
                     <abbr title="This is a required element.">*</abbr>
                 </div>
 
-                <!-- CREATE RADIO BUTTONS FOR 1 ANSWER OF MANY OPTIONS <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor">Indoor</label>-->
+                <!-- CREATE RADIO BUTTONS FOR 1 ANSWER OF MANY OPTIONS <label for="indoor"><input id="indoor" type="radio" name="indoor-outdoor">Indoor</label> MUST INCLUDE VALUES-->
                 <fieldset id="topic">
                     <legend>
                         <b>Choose ONE topic to work on during your lesson.</b>
                     </legend>
                     <div>
                         <label for="full-swing">
-                            <input type="radio" name="lesson-topic" required>Full Swing
+                            <input type="radio" name="lesson-topic" required value="full-swing">Full Swing
                         </label>
                         <label for="putting">
-                            <input type="radio" name="lesson-topic">Putting</label>
+                            <input type="radio" name="lesson-topic" value="putting">Putting</label>
                         <label for="Chipping">
-                            <input type="radio" name="lesson-topic">Chipping</label>
+                            <input type="radio" name="lesson-topic" value="Chipping">Chipping</label>
                         <label for="Playing">
-                            <input type="radio" name="lesson-topic">Playing Lesson</label>
+                            <input type="radio" name="lesson-topic" value="Playing Lesson">Playing Lesson</label>
                         <label for="other">
-                            <input type="radio" name="lesson-topic">Other
+                            <input type="radio" name="lesson-topic" value="Other">Other
                         </label>
                     </div>
                     <div>
